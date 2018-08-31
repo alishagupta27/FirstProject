@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 public class TestProject1 {
 	WebDriver driver;
+	
+	//Test to open browser
 	@Test (priority=1)
 	public void openBrowser() {
 		Path path = FileSystems.getDefault().getPath("src/test/resources/geckodriver-v0.21.0-macos/geckodriver");
@@ -18,12 +20,14 @@ public class TestProject1 {
 		driver=new FirefoxDriver();
 	}
 	
+	//Test to get the URL open
 	@Test (priority=2)
 	public void fetchURL() {
 		driver.get("https://apptimize.com/");
 		driver.manage().window().maximize();
 	}
 	
+	//Test to signup
 	@Test (priority=3)
 	public void signUp() {
 		driver.findElement(By.xpath("//*[@id=\"nav-main\"]/ul[2]/li[2]/a")).click();
@@ -38,6 +42,7 @@ public class TestProject1 {
 		driver.findElement(By.id("submit")).click();
 	}
 	
+	//Test to create app
 	@Test (priority=4)
 	public void createApp() {
 		WebDriverWait d=new WebDriverWait(driver,30);
@@ -46,6 +51,7 @@ public class TestProject1 {
 		driver.findElement(By.id("zet-create-app")).click();
 	}
 	
+	//Test to signout
 	@Test (priority=5)
 	public void signOut() throws InterruptedException {
 		driver.findElement(By.id("zet-navbar-caretdown")).click();
