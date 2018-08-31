@@ -30,7 +30,7 @@ public class TestProject1 {
 		driver.findElement(By.xpath("//*[@id=\"nav-main\"]/ul[2]/li[2]/a")).click();
 		driver.findElement(By.id("fname")).sendKeys("Golmu");
 		driver.findElement(By.id("lname")).sendKeys("Shopping");
-		driver.findElement(By.id("email")).sendKeys("golmus.h.opping@gmail.com");
+		driver.findElement(By.id("email")).sendKeys("golmush.o.pping@gmail.com");
 		driver.findElement(By.id("company")).sendKeys("Test");
 		driver.findElement(By.id("password")).sendKeys("maulikalisha");
 		driver.findElement(By.id("eula")).click();
