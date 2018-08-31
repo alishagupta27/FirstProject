@@ -13,10 +13,9 @@ public class TestProject1 {
 	WebDriver driver;
 	@Test (priority=1)
 	public void openBrowser() {
-		Path path = FileSystems.getDefault().getPath("src/test/resources/geckodriver/geckodriver.exe");
+		Path path = FileSystems.getDefault().getPath("src/test/resources/geckodriver-v0.21.0-macos/geckodriver");
         System.setProperty("webdriver.gecko.driver",path.toString());
-		//System.setProperty("webdriver.gecko.driver","C:\\Users\\z003wkdw\\Downloads\\geckodriver-v0.21.0-win64\\geckodriver.exe");
-	    driver=new FirefoxDriver();
+		driver=new FirefoxDriver();
 	}
 	
 	@Test (priority=2)
@@ -28,14 +27,14 @@ public class TestProject1 {
 	@Test (priority=3)
 	public void signUp() {
 		driver.findElement(By.xpath("//*[@id=\"nav-main\"]/ul[2]/li[2]/a")).click();
-		driver.findElement(By.id("fname")).sendKeys("Golmu");
-		driver.findElement(By.id("lname")).sendKeys("Shopping");
-		driver.findElement(By.id("email")).sendKeys("golmush.o.pping@gmail.com");
-		driver.findElement(By.id("company")).sendKeys("Test");
-		driver.findElement(By.id("password")).sendKeys("maulikalisha");
+		driver.findElement(By.id("fname")).sendKeys("Alisha");
+		driver.findElement(By.id("lname")).sendKeys("Gupta");
+		driver.findElement(By.id("email")).sendKeys("alisha.apptimizetest@gmail.com");
+		driver.findElement(By.id("company")).sendKeys("Apptimize Candidate");
+		driver.findElement(By.id("password")).sendKeys("password");
 		driver.findElement(By.id("eula")).click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,100)");
+		js.executeScript("window.scrollBy(0,150)");
 		driver.findElement(By.id("submit")).click();
 	}
 	
